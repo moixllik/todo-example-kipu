@@ -14,24 +14,25 @@ async function db(event, uri, method, body) {
     return d
 }
 
+function mkItem(id, desc, checked) {
+    return `<li id="${ id }">
+    <label>
+        <input type="checkbox" onclick="completed(this)" data="${ id }" ${ checked || '' } />
+        ${ desc }
+    </label>
+    <b onclick="del('${ id }')">x</b>
+</li>`
+}
+
 document.querySelector('form').addEventListener('submit', async e => {
     let desc = e.target.task.value
     let id = 't' + Date.now().toString(32)
     let d = await db('data', 'todo/desc-' + id, 'POST', desc)
 
-    if (d != '') {
-        $active.innerHTML += 
-`<li id="${ id }">
-    <label>
-        <input type="checkbox" onclick="completed(this)" data="${ id }" />
-        ${ desc }
-    </label>
-    <b onclick="del('${ id }')">x</b>
-</li>`
-    }
+    if (d != '') $active.innerHTML += mkItem(id, desc)
 })
 
-fetch('http://localhost:3320/list/todo/15/desc-').then(r=>r.text()).then(d => {
+fetch('http://localhost:3320/list/todo/0/desc-').then(r=>r.text()).then(d => {
     if (d == '') return
 
     $active.innerHTML = ''
@@ -40,31 +41,12 @@ fetch('http://localhost:3320/list/todo/15/desc-').then(r=>r.text()).then(d => {
     d.split('\n').forEach(async uri => {
         let id = uri.replace('/data/todo/desc-', '')
         let ok = await db('data', 'todo/ok-' + id)
+        let desc = await db('data', 'todo/desc-' + id)
 
-        if (ok == '') {
-            let desc = await db('data', 'todo/desc-' + id)
-
-            $active.innerHTML += 
-`<li id="${ id }">
-    <label>
-        <input type="checkbox" onclick="completed(this)" data="${ id }" />
-        ${ desc }
-    </label>
-    <b onclick="del('${ id }')">x</b>
-</li>`
-
-        } else {
-            let desc = await db('data', 'todo/desc-' + id)
-
-            $completed.innerHTML += 
-`<li id="${ id }">
-    <label>
-        <input type="checkbox" onclick="completed(this)" data="${ id }" />
-        ${ desc }
-    </label>
-    <b onclick="del('${ id }')">x</b>
-</li>`
-        }
+        if (ok == '')
+            $active.innerHTML += mkItem(id, desc)
+        else
+            $completed.innerHTML += mkItem(id, desc, 'checked')
     })
 })
 

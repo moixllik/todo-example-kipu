@@ -1,4 +1,4 @@
-# TODO with Kipu databse
+# TODO with Kipu database
 
 [Kipu database](https://github.com/MuchikNet/kipu)
 
@@ -9,3 +9,8 @@
     /desc-id := text
     /ok-id   := 1 | DELETE
 ```
+
+## Languages
+
+* [Vanilla](vanilla/)
+* [Python](python/)

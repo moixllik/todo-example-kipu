@@ -38,6 +38,7 @@ li b {
     border-radius: 50%;
     font-size: smaller;
     font-family: sans-serif;
+    cursor: pointer;
 }
 /* CLASS */
 .completed {
