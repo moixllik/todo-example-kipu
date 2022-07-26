@@ -1,0 +1,50 @@
+body > * {
+    max-width: 480px;
+    margin: auto;
+    font-size: 22px;
+}
+form {
+    display: flex;
+    border: 1px solid black;
+}
+form > * {
+    vertical-align: middle;
+    border: none;
+}
+form textarea:focus {
+    outline: none;
+    border: none;
+}
+form textarea {
+    width: 100%;
+    padding: .5em;
+}
+form button {
+    background: black;
+    color: white;
+    font-size: 2em;
+}
+li {
+    vertical-align: top;
+    margin-bottom: 1em;
+}
+li i {
+    color: gray;
+}
+li b {
+    padding: 0 .3em;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    font-size: smaller;
+    font-family: sans-serif;
+}
+/* CLASS */
+.completed {
+    color: gray;
+    font-style: italic;
+    margin-top: 2em;
+}
+.completed li {
+    text-decoration: line-through;
+}
