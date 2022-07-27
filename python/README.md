@@ -1,5 +1,7 @@
 ## TODO - Python3
 
+![Image](image.png)
+
 ```bash
 cd python
 
@@ -16,4 +18,10 @@ For `debian-linux` with Tkinter:
 
 ```bash
 sudo apt install python3-tk
+```
+
+For `wsl version 1` with [Xming X Server for Windows](https://sourceforge.net/projects/xming/):
+
+```bash
+export DISPLAY=:0
 ```

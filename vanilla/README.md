@@ -1,5 +1,7 @@
 ## TODO - Vanilla
 
+![Image](image.png)
+
 ```bash
 cd vanilla
 
