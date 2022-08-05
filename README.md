@@ -14,3 +14,4 @@
 
 * [Vanilla](vanilla/)
 * [Python](python/)
+* [Rust](rust/)
