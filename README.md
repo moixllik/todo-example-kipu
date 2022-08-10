@@ -12,6 +12,7 @@
 
 ## Languages
 
-* [Vanilla](vanilla/)
-* [Python](python/)
-* [Rust](rust/)
+|  |  |  |
+|:--:|:--:|:--:|
+|![Vanilla](vanilla/image.png)|![Python](python/image.png)|![Rust](rust/image.png)|
+|[Vanilla](vanilla/)|[Python](python/)|[Rust](rust/)|
