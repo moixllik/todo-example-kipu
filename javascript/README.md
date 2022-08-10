@@ -1,9 +1,9 @@
-## TODO - Vanilla
+## TODO - JavaScript
 
 ![Image](image.png)
 
 ```bash
-cd vanilla
+cd javascript
 
 python3 -m http.server
 ```

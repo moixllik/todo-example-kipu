@@ -14,5 +14,5 @@
 
 |  |  |  |
 |:--:|:--:|:--:|
-|![Vanilla](vanilla/image.png)|![Python](python/image.png)|![Rust](rust/image.png)|
-|[Vanilla](vanilla/)|[Python](python/)|[Rust](rust/)|
+|![JavaScript](javascript/image.png)|![Python](python/image.png)|![Rust](rust/image.png)|
+|[JavaScript](javascript/)|[Python](python/)|[Rust](rust/)|
