@@ -1,6 +1,6 @@
 # TODO with Kipu database
 
-[Kipu database](https://github.com/MuchikNet/database-kipu)
+[Kipu database](https://github.com/MuchikNet/kipu-database)
 
 ## Database schema
 
